@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Facebook</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Welcome to Facebook</h1>
+        <h5>Update your Post</h5>
+        <form action=/feed/edit/<%= result._id %> method = "POST">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <textarea  name="name" id="name" class="form-control"><%= result.name %></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Message</label>
+              <textarea name="message" class="form-control" id="message"><%= result.message %></textarea>
+            </div>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+    </div>
+</body>
+</html>
